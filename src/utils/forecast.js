@@ -13,7 +13,8 @@ request({url:url,json:true},(error,response)=>{
     }
     
     else{
-        callback(undefined,'The Current temp is '+response.body.currently.temperature)
+        console.log(response.body.daily.data[0])
+        callback(undefined,'The Current temp is '+response.body.currently.temperature +'  , Possibility ::'+response.body.daily.data[0].summary)
     }
 
 })
