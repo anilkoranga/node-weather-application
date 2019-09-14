@@ -14,7 +14,7 @@ request({url:url,json:true},(error,response)=>{
     
     else{
         console.log(response.body.daily.data[0])
-        callback(undefined,'The Current temp is '+response.body.currently.temperature +'  , Possibility ::'+response.body.daily.data[0].summary)
+        callback(undefined,'The Current temp is '+response.body.currently.temperature + '  with the high temperature of   ' + response.body.daily.data[0].temperatureHigh +'  and the low tempearture of    '+ response.body.daily.data[0].temperatureLow +  '  Possibility ::  '+ response.body.daily.data[0].summary)
     }
 
 })
